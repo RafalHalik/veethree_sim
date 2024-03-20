@@ -17,3 +17,5 @@
 extern int BTN_FLAGS_TEST;
 
 void create_sim(void);
+void draw_canvas(void);
+void button_bar(void);
