@@ -58,7 +58,7 @@ void draw_canvas(void)
 	//Write codes screen_canvas_1
 	lv_obj_t *screen_canvas_1 = lv_canvas_create(lv_scr_act());
 	static lv_color_t buf_screen_canvas_1[580*475*4];
-	lv_canvas_set_buffer(screen_canvas_1, buf_screen_canvas_1, 580, 475, LV_IMG_CF_TRUE_COLOR_ALPHA);
+	lv_canvas_set_buffer(screen_canvas_1, buf_screen_canvas_1, 576, 471, LV_IMG_CF_TRUE_COLOR_ALPHA);
 	lv_canvas_fill_bg(screen_canvas_1, lv_color_hex(0x0a0a0a), 255);
 	//Canvas draw rectangle
 	lv_draw_rect_dsc_t rect_dsc_0;
@@ -69,8 +69,8 @@ void draw_canvas(void)
 	rect_dsc_0.bg_grad.dir = LV_GRAD_DIR_NONE;
 	rect_dsc_0.border_width = 0;
 	rect_dsc_0.border_opa = 255;
-	rect_dsc_0.border_color = lv_color_hex(0x0a0a0a);
-	lv_canvas_draw_rect(screen_canvas_1, 50, 50, 480, 272, &rect_dsc_0);
+	rect_dsc_0.border_color = lv_color_hex(0xffffff);
+	lv_canvas_draw_rect(screen_canvas_1, 48, 48, 480, 272, &rect_dsc_0);
 
 	//Canvas draw rectangle
 	lv_draw_rect_dsc_t rect_dsc_1;
@@ -81,11 +81,11 @@ void draw_canvas(void)
 	rect_dsc_1.bg_grad.dir = LV_GRAD_DIR_NONE;
 	rect_dsc_1.border_width = 0;
 	rect_dsc_1.border_opa = 255;
-	rect_dsc_1.border_color = lv_color_hex(0x0a0a0a);
-	lv_canvas_draw_rect(screen_canvas_1, 0, 480, 580, 120, &rect_dsc_1);
+	rect_dsc_1.border_color = lv_color_hex(0xffffff);
+	lv_canvas_draw_rect(screen_canvas_1, 0, 471, 576, 120, &rect_dsc_1);
 
-	lv_obj_set_pos(screen_canvas_1, 0, 0);
-	lv_obj_set_size(screen_canvas_1, 580, 475);
+	lv_obj_set_pos(screen_canvas_1, 2, 2);
+	lv_obj_set_size(screen_canvas_1, 576, 471);
 	lv_obj_set_scrollbar_mode(screen_canvas_1, LV_SCROLLBAR_MODE_OFF);
 }
 
@@ -95,8 +95,8 @@ void button_bar(void)
 	lv_obj_t *screen_btnm_1 = lv_btnmatrix_create(lv_scr_act());
 	static const char *screen_btnm_1_text_map[] = {"  ", "  ", "  ", "  ", "  "};
 	lv_btnmatrix_set_map(screen_btnm_1, screen_btnm_1_text_map);
-	lv_obj_set_pos(screen_btnm_1, 0, 360);
-	lv_obj_set_size(screen_btnm_1, 580, 115);
+	lv_obj_set_pos(screen_btnm_1, 2, 360);
+	lv_obj_set_size(screen_btnm_1, 576, 113);
 
 	//Write style for screen_btnm_1, Part: LV_PART_MAIN, State: LV_STATE_DEFAULT.
 	lv_obj_set_style_border_width(screen_btnm_1, 0, LV_PART_MAIN|LV_STATE_DEFAULT);
